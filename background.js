@@ -26,7 +26,7 @@ chrome.runtime.onMessage.addListener((msg) => {
 chrome.contextMenus.create({
     'title' : 'Найти пользователя Marquiz',
     'contexts' : ["selection"],
-    'id':  String(Math.random())
+    'id':  '111'
 })
 
 

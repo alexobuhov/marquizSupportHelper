@@ -48,11 +48,10 @@ function copy(id) {
 var tabId;
 chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
   tabId = tabs[0].id;
-  myAction(); // код, который зависит от tabId
+  myAction();
 });
 
 function myAction() {
-  console.log(tabId);
   chrome.scripting.executeScript({
     target: { tabId } ,
     func: () => { startSearch() }
